@@ -3,16 +3,16 @@ import logging
 logging.basicConfig(level=logging.DEBUG)
 def calc(sign, first_number, second_number):
     if sign == 1:
-        logging.info("Dodaję ")
+        logging.info(("Dodaję %s i %s.") %(first_number, second_number))
         result = first_number + second_number
     elif sign == 2:
-        logging.info("Odejmuję")
+        logging.info(("Odejmuję %s od %s.") %(second_number, first_number))
         result = first_number - second_number
     elif sign == 3:
-        logging.info("Mnożę")
+        logging.info(("Mnożę %s i %s.") %(first_number, second_number))
         result = first_number * second_number
     elif sign == 4:
-        logging.info("Dzielę")
+        logging.info(("Dzielę %s przez %s.") %(first_number, second_number))
         result = first_number / second_number
     else:
         exit(1)
@@ -21,8 +21,8 @@ def calc(sign, first_number, second_number):
 
 if __name__ == "__main__":
     sign = int(sys.argv[1])
-    first_number = sys.argv[2]
-    second_number = sys.argv[3]
+    first_number = float(sys.argv[2])
+    second_number = float(sys.argv[3])
 calc_result = calc(sign, first_number, second_number)
 print(calc_result)
 

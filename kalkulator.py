@@ -1,7 +1,7 @@
 import sys
 import logging
 logging.basicConfig(level=logging.DEBUG)
-sign = input()
+
 def calc(sign, first_number, second_number):
     if sign == 1:
         logging.info(("Dodaję %s i %s.") %(first_number, second_number))
@@ -21,11 +21,8 @@ def calc(sign, first_number, second_number):
     return result
 
 if __name__ == "__main__":
-    #sign = int(sys.argv[1])
     sign = int(input("Podaj działanie, posługując się odpowiednią liczbą: 1 Dodawanie, 2 Odejmowanie, 3 Mnożenie, 4 Dzielenie: "))
-    #first_number = float(sys.argv[2])
     first_number = float(input("Podaj składnik 1: "))
-    #second_number = float(sys.argv[3])
     second_number = float(input("Podaj składnik 2: "))
 calc_result = calc(sign, first_number, second_number)
 print(f"Wynik to: {calc_result}")

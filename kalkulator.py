@@ -1,6 +1,6 @@
 import sys
 import logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.DEBUG, format='%(message)s')
 
 def calc(sign, first_number, second_number):
     if sign == 1:
